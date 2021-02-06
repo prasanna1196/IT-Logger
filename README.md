@@ -10,7 +10,7 @@
 
 Checkout Brad Traversy's 'React front to back' course for more info.
 
-### How to run thr app locally?
+### How to run the app locally?
 
 Clone the repository and install all the required packages by running the command **`npm install`** in the project directory.
 
