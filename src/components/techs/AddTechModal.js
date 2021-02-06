@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { addTech } from "../../actions/techActions";
 import M from "materialize-css/dist/js/materialize.min.js";
+import { connect } from "react-redux";
 
-const AddTechModal = () => {
+const AddTechModal = ({ addTech }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
 
@@ -9,7 +11,12 @@ const AddTechModal = () => {
     if (firstName === "" || lastName === "") {
       M.toast({ html: "Please enter First Name and Last Name" });
     } else {
-      console.log(firstName, lastName);
+      addTech({
+        firstName,
+        lastName,
+      });
+
+      M.toast({ html: `${firstName} ${lastName} added as Tech` });
 
       // Clear fields
       setFirstName("");
@@ -63,4 +70,4 @@ const AddTechModal = () => {
   );
 };
 
-export default AddTechModal;
+export default connect(null, { addTech })(AddTechModal);
