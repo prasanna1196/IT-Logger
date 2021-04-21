@@ -6,9 +6,6 @@
 - Each log will have an id, corresponding technician and date added.
 - Issues that need immidiate attention can be marked in red.
 
-### Learn more
-
-Checkout Brad Traversy's 'React front to back' course for more info.
 
 ### How to run the app locally?
 
